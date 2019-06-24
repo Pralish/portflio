@@ -29,3 +29,9 @@ $background-opacity: 0.5;
     }
   }
 }
+
+@mixin mediaSm {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}

@@ -1,0 +1,114 @@
+.menu-btn {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  z-index: 3;
+  cursor: pointer;
+  @include easeOut;
+
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    margin-bottom: 5px;
+    @include easeOut;
+  }
+
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-line {
+      &:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+.menu {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding,
+  &-nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+  }
+
+  &-nav {
+    background: darken($primary-color, 5);
+    transform: translateY(-100%);
+    @include easeOut;
+
+    &.show {
+      transform: translateY(0);
+    }
+  }
+
+  &-branding {
+    background: $primary-color;
+    @include easeOut;
+    transform: translateY(100%);
+
+    &.show {
+      transform: translateY(0);
+    }
+
+    .potrait {
+      height: 250px;
+      width: 250px;
+      background: url(../assets/pk.jpg);
+      background-size: cover;
+      border-radius: 50%;
+      border: $secondary-color 3px solid;
+    }
+  }
+
+  .nav-item {
+    transform: translateX(600px);
+    @include easeOut;
+
+    &.current > a {
+      color: $secondary-color;
+    }
+
+    .nav-link {
+      display: inline-block;
+      padding: 10px 0;
+      font-weight: 500;
+      @include easeOut;
+    }
+
+    &.show {
+      transform: translateX(0);
+    }
+  }
+}
+
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.2s;
+  }
+}
