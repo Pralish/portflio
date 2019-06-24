@@ -1,0 +1,185 @@
+.menu-btn {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  z-index: 3;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    margin-bottom: 5px;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg); }
+
+.menu {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9; }
+  .menu.show {
+    visibility: visible; }
+  .menu-branding, .menu-nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 50%;
+    height: 100vh; }
+  .menu-nav {
+    background: #373737;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-out; }
+    .menu-nav.show {
+      transform: translateY(0); }
+  .menu-branding {
+    background: #444;
+    transition: all 0.5s ease-out;
+    transform: translateY(100%); }
+    .menu-branding.show {
+      transform: translateY(0); }
+    .menu-branding .potrait {
+      height: 250px;
+      width: 250px;
+      background: url(../assets/pk.jpg);
+      background-size: cover;
+      border-radius: 50%;
+      border: #eece1a 3px solid; }
+  .menu .nav-item {
+    transform: translateX(600px);
+    transition: all 0.5s ease-out; }
+    .menu .nav-item.current > a {
+      color: #eece1a; }
+    .menu .nav-item .nav-link {
+      display: inline-block;
+      padding: 10px 0;
+      font-weight: 500;
+      transition: all 0.5s ease-out; }
+    .menu .nav-item.show {
+      transform: translateX(0); }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.4s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.6s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.8s; }
+
+@media screen and (max-width: 640px) {
+  main {
+    text-align: center;
+    align-items: center; }
+    main .lg-heading {
+      line-height: 1;
+      padding-bottom: 10px; }
+  main#home h1 {
+    font-size: 3.5rem;
+    margin-top: 18vh; }
+  main#home h2 {
+    font-size: 1rem; }
+  .menu {
+    margin: 0;
+    padding: 0; }
+    .menu-branding, .menu-nav {
+      float: none;
+      width: 100%;
+      min-height: 0; }
+    .menu-nav {
+      height: 70vh;
+      transform: translate3d(100%, 0, 0); }
+    .menu-branding {
+      height: 30vh;
+      transform: translate3d(-100%, 0, 0); }
+      .menu-branding .potrait {
+        height: 150px;
+        width: 150px; } }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #444;
+  margin: 0;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+  body#bg-image {
+    background: url(../assets/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center; }
+    body#bg-image:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.5); }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 4rem; }
+    h1.lg-heading span,
+    h2.lg-heading span,
+    h3.lg-heading span {
+      color: #eece1a; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    font-size: 1.4rem; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+  a:hover {
+    color: #eece1a; }
+
+ul {
+  list-style: none; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; }
+
+main {
+  height: 100%;
+  padding: 4rem; }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons i {
+      padding: 0.4rem; }
+      main .icons i:hover {
+        color: #eece1a;
+        transition: all 0.5s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
