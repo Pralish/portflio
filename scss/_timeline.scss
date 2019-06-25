@@ -1,0 +1,132 @@
+.time-line {
+  margin: 0;
+  padding: 0;
+}
+.timeline {
+  margin: 4rem auto;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: #fff;
+
+    @include mediaSm {
+      left: -20px;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    position: relative;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    width: 50%;
+
+    @include mediaSm {
+      width: 100%;
+      padding: 60px 0 0 10px;
+    }
+
+    .content {
+      padding-bottom: 20px;
+
+      h2 {
+        color: $secondary-color;
+      }
+    }
+
+    .time {
+      color: $primary-color;
+      position: absolute;
+      padding: 5px 20px;
+      border-radius: 18px;
+      background: $secondary-color;
+      white-space: nowrap;
+    }
+  }
+  ul li:nth-child(odd) {
+    text-align: right;
+    float: left;
+    clear: both;
+
+    .time {
+      top: 26px;
+      right: -125px;
+
+      // @include mediaSm {
+      //   top: -26px;
+      //   left: 50px;
+      //   right: inherit;
+      // }
+    }
+
+    &::before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba($secondary-color, 0.2);
+      position: absolute;
+      background: $secondary-color;
+      top: 34px;
+      right: -8px;
+    }
+  }
+
+  ul li:nth-child(even) {
+    text-align: left;
+    float: right;
+    clear: both;
+
+    .time {
+      top: 26px;
+      left: -127px;
+
+      // @include mediaSm {
+      //   top: 0;
+      //   left: 0;
+      // }
+    }
+
+    &::before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba($secondary-color, 0.2);
+      position: absolute;
+      background: $secondary-color;
+      top: 34px;
+      left: -6px;
+    }
+  }
+
+  @include mediaSm {
+    ul li:nth-child(even),
+    ul li:nth-child(odd) {
+      text-align: left;
+      float: left;
+
+      &::before {
+        left: -26px;
+        top: 20px;
+      }
+
+      .time {
+        top: 10px;
+        left: 10px;
+        right: inherit;
+      }
+    }
+  }
+}
