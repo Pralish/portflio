@@ -11,6 +11,10 @@
     background: #fff;
     margin-bottom: 5px;
     transition: all 0.5s ease-out; }
+  .menu-btn:hover .btn-line:nth-child(1) {
+    transform: translateY(-2px); }
+  .menu-btn:hover .btn-line:nth-child(3) {
+    transform: translateY(2px); }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -111,96 +115,101 @@
         height: 150px;
         width: 150px; } }
 
-.time-line {
-  margin: 0;
-  padding: 0; }
-
-.timeline {
-  margin: 4rem auto;
-  position: relative;
-  width: 100%; }
-  .timeline::before {
-    content: "";
-    width: 2px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    background: #fff; }
-    @media screen and (max-width: 640px) {
-      .timeline::before {
-        left: -20px; } }
-  .timeline ul {
-    margin: 0;
-    padding: 0; }
-  .timeline ul li {
+#time-line {
+  padding: 0 3.5rem; }
+  #time-line h1 {
+    text-align: center; }
+  #time-line .timeline {
+    margin: 0 auto 4rem auto;
     position: relative;
-    padding: 20px 40px;
-    box-sizing: border-box;
-    width: 50%; }
-    @media screen and (max-width: 640px) {
-      .timeline ul li {
-        width: 100%;
-        padding: 60px 0 0 10px; } }
-    .timeline ul li .content {
-      padding-bottom: 20px; }
-      .timeline ul li .content h2 {
-        color: #eece1a; }
-    .timeline ul li .time {
-      color: #444;
-      position: absolute;
-      padding: 5px 20px;
-      border-radius: 18px;
-      background: #eece1a;
-      white-space: nowrap; }
-  .timeline ul li:nth-child(odd) {
-    text-align: right;
-    float: left;
-    clear: both; }
-    .timeline ul li:nth-child(odd) .time {
-      top: 26px;
-      right: -125px; }
-    .timeline ul li:nth-child(odd)::before {
+    width: 100%; }
+    #time-line .timeline::before {
       content: "";
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      box-shadow: 0 0 0 3px rgba(238, 206, 26, 0.2);
+      width: 2px;
+      height: 100%;
       position: absolute;
-      background: #eece1a;
-      top: 34px;
-      right: -8px; }
-  .timeline ul li:nth-child(even) {
-    text-align: left;
-    float: right;
-    clear: both; }
-    .timeline ul li:nth-child(even) .time {
-      top: 26px;
-      left: -127px; }
-    .timeline ul li:nth-child(even)::before {
-      content: "";
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      box-shadow: 0 0 0 3px rgba(238, 206, 26, 0.2);
-      position: absolute;
-      background: #eece1a;
-      top: 34px;
-      left: -6px; }
-  @media screen and (max-width: 640px) {
-    .timeline ul li:nth-child(even),
-    .timeline ul li:nth-child(odd) {
+      top: 0;
+      left: 50%;
+      background: #fff; }
+      @media screen and (max-width: 640px) {
+        #time-line .timeline::before {
+          left: -20px; } }
+    #time-line .timeline ul {
+      margin: 0;
+      padding: 0; }
+    #time-line .timeline ul li {
+      position: relative;
+      padding: 20px 40px;
+      box-sizing: border-box;
+      width: 50%; }
+      @media screen and (max-width: 640px) {
+        #time-line .timeline ul li {
+          width: 100%;
+          padding: 60px 0 0 10px; } }
+      #time-line .timeline ul li .content {
+        padding-bottom: 20px; }
+        #time-line .timeline ul li .content h2 {
+          color: #eece1a; }
+      #time-line .timeline ul li .time {
+        color: #444;
+        position: absolute;
+        padding: 5px 20px;
+        border-radius: 18px;
+        background: #eece1a;
+        white-space: nowrap; }
+    #time-line .timeline ul li:nth-child(odd) {
+      text-align: right;
+      float: left;
+      clear: both; }
+      #time-line .timeline ul li:nth-child(odd) .time {
+        top: 26px;
+        right: -125px; }
+      #time-line .timeline ul li:nth-child(odd)::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px rgba(238, 206, 26, 0.2);
+        position: absolute;
+        background: #eece1a;
+        top: 34px;
+        right: -8px; }
+    #time-line .timeline ul li:nth-child(even) {
       text-align: left;
-      float: left; }
-      .timeline ul li:nth-child(even)::before,
-      .timeline ul li:nth-child(odd)::before {
-        left: -26px;
-        top: 20px; }
-      .timeline ul li:nth-child(even) .time,
-      .timeline ul li:nth-child(odd) .time {
-        top: 10px;
-        left: 10px;
-        right: inherit; } }
+      float: right;
+      clear: both; }
+      #time-line .timeline ul li:nth-child(even) .time {
+        top: 26px;
+        left: -127px; }
+      #time-line .timeline ul li:nth-child(even)::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px rgba(238, 206, 26, 0.2);
+        position: absolute;
+        background: #eece1a;
+        top: 34px;
+        left: -6px; }
+    @media screen and (max-width: 640px) {
+      #time-line .timeline {
+        margin-top: 4rem; }
+        #time-line .timeline ul li:nth-child(even),
+        #time-line .timeline ul li:nth-child(odd) {
+          text-align: left;
+          float: left; }
+          #time-line .timeline ul li:nth-child(even)::before,
+          #time-line .timeline ul li:nth-child(odd)::before {
+            left: -26px;
+            top: 20px; }
+          #time-line .timeline ul li:nth-child(even) .time,
+          #time-line .timeline ul li:nth-child(odd) .time {
+            top: 10px;
+            left: 10px;
+            right: inherit; } }
+  @media screen and (max-width: 640px) {
+    #time-line {
+      padding: 1rem 4rem; } }
 
 * {
   box-sizing: border-box; }
@@ -261,8 +270,7 @@ header {
   z-index: 2; }
 
 main {
-  height: 100%;
-  padding: 4rem; }
+  height: 100%; }
   main .icons {
     margin-top: 1rem; }
     main .icons i {
@@ -271,47 +279,33 @@ main {
         color: #eece1a;
         transition: all 0.5s ease-out; }
   main#home {
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 4rem; }
     main#home h1 {
       margin-top: 20vh; }
 
-.headings {
-  position: absolute;
-  top: 0px;
-  left: 30px;
-  display: flex;
-  padding: 5px 30px; }
-  .headings h1 {
-    font-size: 3rem;
-    padding-right: 4rem; }
-  .headings a {
-    margin: 2rem 4rem 0 0; }
-    .headings a.topic {
-      color: #eece1a; }
-  @media screen and (max-width: 640px) {
-    .headings {
-      left: 0;
-      display: block; }
-      .headings h1 {
-        font-size: 2.5rem;
-        padding: 10px 0 5px 0;
-        text-align: left; }
-      .headings a {
-        margin-right: 2rem; } }
+.headings h1 {
+  font-size: 4rem;
+  padding: 4rem; }
+
+@media screen and (max-width: 640px) {
+  .headings {
+    left: 0;
+    display: block; }
+    .headings h1 {
+      font-size: 3rem;
+      padding: 0 0 10px 0; }
+    .headings a {
+      margin-right: 2rem; } }
 
 #about {
-  margin-top: 5em; }
+  padding: 0 2.5rem 2rem 2.5rem; }
   #about .info {
     display: grid;
     grid-gap: 30px;
     grid-template-areas: "bio-img bio bio";
     grid-template-columns: repeat(3, 1fr);
     margin-top: 1rem; }
-    @media screen and (max-width: 640px) {
-      #about .info {
-        text-align: center;
-        grid-template-areas: "bio-img" "bio";
-        grid-template-columns: 1fr; } }
     #about .info .bio-img {
       margin: auto;
       align-items: center;
@@ -326,3 +320,25 @@ main {
       padding: 20px; }
       #about .info .about-myself h2 {
         color: #eece1a; }
+  @media screen and (max-width: 640px) {
+    #about {
+      padding-top: 1rem;
+      text-align: center; }
+      #about .info {
+        grid-template-areas: "bio-img" "bio";
+        grid-template-columns: 1fr; } }
+
+.about-contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: rgba(55, 55, 55, 0.9); }
+  .about-contents a {
+    margin: 2rem 2rem; }
+    .about-contents a.topic {
+      color: #eece1a; }

@@ -14,6 +14,18 @@
     @include easeOut;
   }
 
+  &:hover {
+    .btn-line {
+      &:nth-child(1) {
+        transform: translateY(-2px);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(2px);
+      }
+    }
+  }
+
   &.close {
     transform: rotate(180deg);
 
