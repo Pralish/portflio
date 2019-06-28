@@ -113,7 +113,10 @@
       transform: translate3d(-100%, 0, 0); }
       .menu-branding .potrait {
         height: 150px;
-        width: 150px; } }
+        width: 150px; }
+  main#cv {
+    display: block;
+    text-align: left; } }
 
 #time-line {
   padding: 0 3.5rem; }
@@ -342,3 +345,56 @@ main {
     margin: 2rem 2rem; }
     .about-contents a.topic {
       color: #eece1a; }
+
+#cv {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  line-height: 2; }
+  #cv i {
+    padding-right: 5px; }
+  #cv h3,
+  #cv i {
+    color: #eece1a;
+    line-height: 1.5; }
+  #cv .flex-item {
+    margin: 10px;
+    background: #515151;
+    box-shadow: 6px 10px 10px 2px #373737; }
+  #cv .item {
+    padding: 20px; }
+  #cv .left-container {
+    position: relative;
+    flex: 40%;
+    height: 100%; }
+    #cv .left-container .cv-image {
+      overflow: hidden;
+      position: relative;
+      background: url(../assets/pk.jpg);
+      background-size: cover;
+      width: 100%;
+      min-height: 40vh; }
+      #cv .left-container .cv-image h1 {
+        font-size: 2rem;
+        position: absolute;
+        left: 20px;
+        bottom: 0;
+        white-space: nowrap; }
+        #cv .left-container .cv-image h1 span {
+          color: #eece1a; }
+    #cv .left-container .personal-info {
+      border-bottom: 2px #444 solid; }
+      #cv .left-container .personal-info p {
+        display: inline-block; }
+  #cv .right-container {
+    flex: 60%;
+    display: flex;
+    flex-direction: column; }
+    #cv .right-container h1 {
+      padding-bottom: 20px; }
+      #cv .right-container h1 i {
+        padding-right: 15px; }
+    #cv .right-container p {
+      line-height: 2.5;
+      padding-bottom: 20px; }
