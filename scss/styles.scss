@@ -73,6 +73,7 @@ main {
   //home page
 
   &#home {
+    min-height: 100vh;
     overflow: hidden;
     padding: 4rem;
     h1 {
@@ -105,6 +106,7 @@ main {
 //about page
 
 #about {
+  min-height: 100vh;
   padding: 0 2.5rem 2rem 2.5rem;
   .info {
     display: grid;

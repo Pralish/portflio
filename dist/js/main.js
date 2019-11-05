@@ -3,8 +3,14 @@ menu = document.querySelector(".menu");
 menuBranding = document.querySelector(".menu-branding");
 menuNav = document.querySelector(".menu-nav");
 navItem = document.querySelectorAll(".nav-item");
+home = document.querySelector("#home");
 
 let showMenu = false;
+window.addEventListener("scroll", function(event) {
+  let posY = (window.pageYOffset * 1) / 500;
+  console.log(posY);
+  home.style.opacity = 0.8 - posY;
+});
 
 menuBtn.addEventListener("click", menuToggle);
 function menuToggle() {
